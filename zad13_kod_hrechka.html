@@ -1,0 +1,53 @@
+<html>
+ <body>
+    <script language="javascript">
+        function okno_zamknij_milc()
+         {
+         window.close()
+         }
+    </script>
+ <textarea cols="90" rows="24">
+ <html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 13 – Ułamek egipski</title>
+</head>
+<body style="color:rgb(255, 0, 0); font-size:30px;">
+
+<script>
+    // Artem Hrechka 2P 24.09.2026
+    // Zadanie 13 
+
+    
+    var m_Hre = prompt("Podaj wartość m:", "");
+
+    
+    var m = parseFloat(m_Hre);
+
+    
+    if (isNaN(m) || m <= 0) {
+        document.write("Podano niepoprawną wartość m!");
+    } else {
+       
+        var ulamek1 = 1 / (m + 1);
+        var ulamek2 = 1 / (m * (m + 1));
+
+        document.write("<h2>Rozkład ułamka egipskiego:</h2>");
+        document.write("1/" + m + " = 1/" + (m + 1) + " + 1/" + (m * (m + 1)) + "<br><br>");
+        
+    }
+    function okno_zamknij() {
+        window.close();
+    }
+</script>
+
+<br><br>
+<input type="button" value="Zamknij okno" onclick="okno_zamknij()"/>
+
+</body>
+</html>
+
+ </textarea>
+<br> <input type="button" value="zamknij okno" onclick="okno_zamknij_milc()"/>
+ </body>
+</html>

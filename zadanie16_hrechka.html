@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="utf-8">
+  <title>Sterowanie Wydrukami</title>
+</head>
+<body>
+  <div style="color:navy; font-size:100px;">
+  <script>
+    var A_Hre = prompt("A=", "");
+    var A = parseFloat(A_Hre);
+    var B_Hre = prompt("B=", "");
+    var B = parseFloat(B_Hre);
+    
+    document.write("A=" + A_Hre + " B=" + B_Hre + "<br>");
+
+    var term1 = A ** 3;
+    var term2 = 3 * (A ** 2) * B;
+    var term3 = 3 * A * (B ** 2);
+    var term4 = B ** 3;
+
+    var result = term1 + term2 + term3 + term4;
+
+    var fullFormula = "(" + A_Hre + " + " + B_Hre + ")^3 = " +A_Hre + "^3 + 3*(" + A_Hre  + "^2)*" + B_Hre + " + 3*" + A_Hre + "*(" + B_Hre + "^2) + " + B_Hre + "^3 = " +term1 + " + " + term2 + " + " + term3 + " + " + term4 + " = " +result;
+
+    document.write(fullFormula);
+  </script></div>
+  
+  <style>
+
+  </style>
+</body>
+</html

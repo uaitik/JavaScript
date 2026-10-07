@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 14 Rozkład ułamka egipskiego na trzy ułamki egipskie</title>
+</head>
+<body style="color:rgb(250, 0, 0); font-size:30px;">
+
+<script>
+// Artem Hrechka 2P 24.10.2026
+
+
+	var m_Hre = prompt("Podaj wartość m:", "");
+
+
+	var m = parseFloat(m_Hre);
+    var m1 = m + 1;
+    var m2 = m * (m + 1);
+    var m3 = m1 + 1;
+    var m4 = m1 * (m1 + 1); 
+	
+    document.write("<h2>Rozkład ułamka egipskiego:</h2>");
+    document.write("1/" + m + " = 1/" + m3 + " + 1/" + m4 + " + 1/" + m2 + "<br><br>");
+
+	function okno_zamknij() 
+	{
+    window.close();
+	}
+</script>
+
+<br><br>
+<input type="button" value="Zamknij okno" onclick="okno_zamknij()"/>
+
+</body>
+</html>
