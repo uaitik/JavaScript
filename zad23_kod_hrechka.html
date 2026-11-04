@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 23 kod Hrechka</title>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <textarea cols="110" rows="38">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 23 Hrechka</title>
+    <script type="text/javascript">
+        function dlugosc_hre(D_Hre, X_Hre) {
+            var d = parseFloat(D_Hre);
+            var x = parseFloat(X_Hre);
+            var dlugosc = Math.sqrt(d*d + x*x);
+            document.getElementById('wynik_dlugosc').value = dlugosc.toFixed(2) + " m";
+        }
+        function kat_hre(D_Hre, X_Hre) {
+            var d_hre = parseFloat(D_Hre);
+            var x_hre = parseFloat(X_Hre);
+            var rad = Math.atan(d_hre / x_hre);
+            var deg = rad * (180 / Math.PI);
+            document.getElementById('wynik_kat').value = deg.toFixed(2) + "°";
+        }
+        function okno_zamknij_hrechka() { window.close(); }
+    </script>
+</head>
+<body>
+    <h2>Drabina oparta o mur</h2>
+    <form>
+        Wysokość oparcia drabiny D: <input type="text" id="D_hre" size="6"><br><br>
+        Odległość oparcia drabiny X: <input type="text" id="X_hre" size="6"><br><br>
+        <input type="button" value="Oblicz długość drabiny" onclick="dlugosc_hre
+            (document.getElementById('D_hre').value, document.getElementById('X_hre').value)"><br><br>
+        <input type="button" value="Oblicz kąt nachylenia" onclick="kat_hre
+            (document.getElementById('D_hre').value, document.getElementById('X_hre').value)"><br><br>
+        Długość drabiny: <input type="text" id="wynik_dlugosc" size="15"><br><br>
+        Kąt nachylenia: <input type="text" id="wynik_kat" size="15"><br><br>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_hrechkas()">
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

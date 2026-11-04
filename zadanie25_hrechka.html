@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 25 - Hrechka</title>
+</head>
+<body>
+
+
+<div style="color: rgb(0, 0, 128); font-size: 32px; font-family: 'Times New Roman', Times, serif;">
+    <script language="JavaScript">
+
+        var N0_Hre = parseFloat(prompt("Podaj początkową ilość atomów N0 [sztuk]=", "1"));
+        var t_Hre = parseFloat(prompt("Podaj czas t [lat]=", "1"));
+        var T12_Hre = parseFloat(prompt("Podaj okres połowicznego rozpadu T1/2 [lat]=", "5700"));
+        var lambda_Hre = Math.log(2) / T12_Hre;
+        var N_Hre = N0_Hre * Math.pow(Math.E, -lambda_Hre * t_Hre);
+
+        document.write("N0=" + N0_Hre + "[sztuk]<br>");
+        document.write("t=" + t_Hre + "[lat]<br>");
+        document.write("T1/2=" + T12_Hre + "[lat]<br>");
+        document.write("Lambda=" + lambda_Hre.toFixed(7) + "[1/rok]<br>");
+        document.write("N=" + N_Hre.toFixed(6) + "[sztuk]<br>");
+        function okno_zamknij_Hre() {
+            window.close();
+        }
+    </script>
+</div>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_Hre()"/>
+</body>
+</html>
