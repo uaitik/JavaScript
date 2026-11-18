@@ -1,0 +1,59 @@
+<html>
+ <body>
+    <script language="javascript">
+        function okno_zamknij_milc()
+         {
+         window.close()
+         }
+    </script>
+ <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 31</title>
+</head>
+<body bgcolor="#ADD8E6">
+<div style="color:rgb(255, 0, 0);font-size:51px;">
+<script type="text/javascript">
+var Wazon = {
+Material: 'Szkło',
+kolor: 'biało-niebieskim',
+jak_wykonany: 'Ręcznie malowany',
+Wazon_wyswietl_Hrechka: function ()
+{
+document.write("Dane obiektu Wazon"+"<br>");
+document.write("Dane wazonu===>"+this.Material+" "+this.kolor+" "+this.jak_wykonany)
+}
+}
+Wazon.Wazon_wyswietl_Hrechka();
+Wazon.wiek = 5;
+Wazon.Wazon_pokaz_hrechka = function ()
+{
+document.write(this.wiek);
+}
+Wazon.Wazon_pokaz_hrechka();
+</script>
+</div>
+<br>
+<div style="color:blue;font-size:38px;">
+Mój numer w dzienniku jest 5 i moje dane to:<br>
+Obiekt to Wazon<br>
+pola:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kolor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jak_wykonany<br>
+metoda:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wazon_wyswietl_Hrechka();<br>
+==========================================================================<br>
+nowe pole to wiek dla obiektu wazon urodz pola to 5<br>
+nowa definicja metody to Wazon_pokaz_hrechka(); z użyciem alert()<br>
+użycie metody Wazon_pokaz_hrechka();
+</div>
+</body>
+</html>
+ </textarea>
+<br> <input type="button" value="zamknij okno" onclick="okno_zamknij_milc()"/>
+ </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 32 – Hrechka</title>
+</head>
+<body bgcolor="yellow">
+<div style="color:rgb(0, 255, 0);font-size:46px;">
+<script type="text/javascript">
+    function wazon(material_w, kolor_w, jak_wykonany_w, wysokosc_w)
+    {
+        this.material = material_w;
+        this.kolor = kolor_w;
+        this.jak_wykonany = jak_wykonany_w;
+        this.wysokosc = wysokosc_w;
+    }
+    wazon.prototype.wypisz = function () 
+    {
+        alert(this.material + " " + this.kolor + " " + this.jak_wykonany + " " + this.wysokosc);
+    };
+
+    var wazon1 = new wazon("Szkło", "biało-niebieski", "ręcznie malowany", "30cm");
+    var wazon2 = new wazon("Ceramika", "zielony", "szkliwiony", "25cm");
+
+    wazon1.wypisz();
+    wazon2.wypisz(); 
+
+    document.write("Moje nazwisko to Hechka mam numer 5 a obiekt to wazon"+"<br>");
+    document.write("dostęp do pól wazon1 i wazon2"+"<br>");
+    document.write("czyli wypisanie danych"+"<br>");
+
+    document.write("wazon pierwszy =>"+" "+wazon1.material+" "+wazon1.kolor+" "+wazon1.jak_wykonany+" "+wazon1.wysokosc+"<br>");
+    document.write("wazon drugi =>"+" "+wazon2.material+" "+wazon2.kolor+" "+wazon2.jak_wykonany+" "+wazon2.wysokosc+"<br>");
+
+    wazon.prototype.wiek = 5;
+    wazon.prototype.wazon_pokaz_hrechka = function () {
+        document.write("Wiek wazonu (właściwość dopisana): " + this.wiek + "<br>");
+    };
+
+    document.write("Użycie dopisanej metody:<br>");
+    wazon1.wazon_pokaz_hrechka();
+</script>
+</div>
+
+<div style="color:rgb(0, 0, 128);font-size:50px;"><br>
+programowanie obiektowe:<br>
+Słowo kluczowe prototype stosowane jest do:<br>
+dodawania nowych metod lub właściwości do już istniejącego konstruktora – dzięki temu wszystkie obiekty<br>
+utworzone tym konstruktorem (np. wazon1, wazon2) mają dostęp do tej samej metody bez potrzeby<br>
+wpisywania jej w każdym obiekcie osobno. Oszczędza to pamięć i pozwala na wspólną definicję zachowania.<br>
+Słowo kluczowe new stosowane jest do:<br>
+tworzenia nowej instancji (nowego obiektu) na podstawie konstruktora, np. new wazon("Szkło","biało-niebieski","ręcznie malowany","30cm")<br>
+– powoduje wywołanie konstruktora, utworzenie nowego obiektu oraz przypisanie do jego pól wartości przekazanych<br>
+w argumentach. Wynik zapisujemy w zmiennej (np. wazon1, wazon2).<br>
+</div>
+</body>
+</html>
